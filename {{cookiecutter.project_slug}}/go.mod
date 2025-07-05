@@ -1,4 +1,4 @@
-module github.com/EugeneTsydenov/chesshub-t-service
+module github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service
 
 go 1.24.2
 

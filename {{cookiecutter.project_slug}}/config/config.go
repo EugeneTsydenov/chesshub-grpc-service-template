@@ -19,7 +19,7 @@ const (
 type Config struct {
 	App      AppConfig      `mapstructure:"app"`
 	Database DatabaseConfig `mapstructure:"database"`
-	GeoIp    GeoIp
+	Redis    RedisConfig
 }
 
 type AppConfig struct {
@@ -37,8 +37,12 @@ type DatabaseConfig struct {
 	SSLMode  string `mapstructure:"ssl_mode"`
 }
 
-type GeoIp struct {
-	DatabasePath string `mapstructure:"database_path"`
+type RedisConfig struct {
+	Host     string `mapstructure:"host"`
+	Port     int    `mapstructure:"port"`
+	User     string `mapstructure:"user"`
+	Password string `mapstructure:"password"`
+	DBNumber int    `mapstructure:"db_number"`
 }
 
 func Load(env, cfgPath string) (*Config, error) {
