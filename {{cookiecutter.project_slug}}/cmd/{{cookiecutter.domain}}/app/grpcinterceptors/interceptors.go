@@ -3,7 +3,7 @@ package grpcinterceptors
 import (
 	"context"
 
-	"github.com/EugeneTsydenov/chesshub-sessions-service/cmd/sessions/app/tracker"
+	"github.com/EugeneTsydenov/chesshub-sessions-service/cmd/{{cookiecutter.domain}}/app/tracker"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"

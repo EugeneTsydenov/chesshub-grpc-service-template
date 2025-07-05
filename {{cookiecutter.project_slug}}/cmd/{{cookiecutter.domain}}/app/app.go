@@ -1,11 +1,16 @@
 package app
 
 import (
+	""
 	"context"
 	"fmt"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/{{cookiecutter.project_slug}}/cmd/{{cookiecutter.domain}}/app/grpcinterceptors"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/{{cookiecutter.project_slug}}/cmd/{{cookiecutter.domain}}/app/tracker"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/{{cookiecutter.project_slug}}/config"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/cmd/{{cookiecutter.domain}}/app/grpcinterceptors"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/cmd/{{cookiecutter.domain}}/app/tracker"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/config"
+	"github.com/sirupsen/logrus"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/grpc/reflection"
 	"net"
 	"os"
 	"os/signal"
