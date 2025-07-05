@@ -1,4 +1,9 @@
 {
   "domain": "domain",
-  "project_slug": "slug"
+  "project_slug": "slug",
+  "port": 9090,
+  "db_port": 5432,
+  "redis_port": 6379,
+  "insight_port": 5540,
+  "adminer_port": 8080
 }

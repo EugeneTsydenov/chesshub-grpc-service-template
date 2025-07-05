@@ -12,6 +12,6 @@ database:
 
 redis:
   user: redis
-  host: chesshub-{{cookiecutter.domain}}-local-redis
+  host: chesshub-sessions-local-redis
   port: 6379
   db_number: 0

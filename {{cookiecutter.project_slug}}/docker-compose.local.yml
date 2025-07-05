@@ -6,7 +6,7 @@ services:
       dockerfile: ../Dockerfile.local
     container_name: chesshub-{{cookiecutter.domain}}-local-app
     ports:
-      - "9090:8080"
+      - "{{cookiecutter.port}}:8080"
     env_file: ".env.local"
     volumes:
       - .:/app
@@ -24,7 +24,7 @@ services:
       dockerfile: Dockerfile.local.postgres
     container_name: chesshub-{{cookiecutter.domain}}-local-db
     ports:
-      - "9432:5432"
+      - "{{cookiecutter.db_port}}:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -37,7 +37,7 @@ services:
     image: redis:7-alpine
     container_name: chesshub-{{cookiecutter.domain}}-local-redis
     ports:
-      - "6379:6379"
+      - "{{cookiecutter.redis_port}}:6379"
     volumes:
       - redis_data:/data
       - ./redis.conf:/usr/local/etc/redis/redis.conf
@@ -48,7 +48,7 @@ services:
     image: redislabs/redisinsight:latest
     container_name: chesshub-{{cookiecutter.domain}}-local-redis-insight
     ports:
-      - "5540:5540"
+      - "{{cookiecutter.insight_port}}:5540"
     depends_on:
       - redis
     volumes:
@@ -62,7 +62,7 @@ services:
     depends_on:
       - db
     ports:
-      - "9091:8080"
+      - "{{cookiecutter.adminer_port}}:8080"
     networks:
       - chesshub-net
 networks:
