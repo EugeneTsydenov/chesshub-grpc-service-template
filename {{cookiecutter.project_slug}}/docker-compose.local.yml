@@ -2,8 +2,8 @@ version: "3.9"
 services:
   app:
     build:
-      context: .
-      dockerfile: Dockerfile.local
+      context: ..
+      dockerfile: ../Dockerfile.local
     container_name: chesshub-{{cookiecutter.domain}}-local-app
     ports:
       - "9090:8080"
@@ -20,7 +20,7 @@ services:
       - chesshub-net
   db:
     build:
-      context: .
+      context: ..
       dockerfile: Dockerfile.local.postgres
     container_name: chesshub-{{cookiecutter.domain}}-local-db
     ports:

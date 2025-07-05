@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/cmd/{{cookiecutter.domain}}/app"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/config"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/{{cookiecutter.project_slug}}/cmd/{{cookiecutter.domain}}/app"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/{{cookiecutter.project_slug}}/config"
 	"os"
 )
 
