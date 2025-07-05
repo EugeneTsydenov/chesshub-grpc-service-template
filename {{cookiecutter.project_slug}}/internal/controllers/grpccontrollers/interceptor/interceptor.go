@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/controllers/grpccontroller/grpcerrors"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/controllers/grpccontrollers/grpcerrors"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 )

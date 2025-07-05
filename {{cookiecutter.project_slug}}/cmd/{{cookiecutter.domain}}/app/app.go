@@ -7,7 +7,7 @@ import (
 	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/cmd/{{cookiecutter.domain}}/app/grpcinterceptors"
 	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/cmd/{{cookiecutter.domain}}/app/tracker"
 	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/config"
-	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/controllers/interceptor"
+	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/controllers/grpccontrollers/interceptor"
 	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/infrastrcuture/data/postgres"
 	"github.com/EugeneTsydenov/chesshub-{{cookiecutter.domain}}-service/internal/infrastrcuture/data/redis"
 
